@@ -41,7 +41,7 @@ transition: background-color 0.5x ease;
 input[type="text"]{
     font-size: 1.6rem;
     padding: 10px;
-    border: 2px solid blanchedalmond ;
+    border: 2px solid rgb(104, 69, 17) ;
     border-radius: 5px;
     color: red;
 }
@@ -66,4 +66,10 @@ li{
     padding: 8px 12px;
     font-size: 1.4rem;
     margin-left:10px;
+}
+
+.to-do-list-time{
+    color: black;
+    border-color: black;
+    border: 3px solid black;
 }

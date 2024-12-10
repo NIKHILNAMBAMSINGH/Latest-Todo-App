@@ -12,10 +12,12 @@ function App(){
 
   function addTask(){
     if(newTask.trim()!=""){
-      const date=new Date().toLocaleDateString;
-      console.log(data);
-      setTask((t=>[...t,newTask]))
-      setNewTask("")
+      const date=new Date().toLocaleTimeString();
+      console.log(date);
+      setTask((t)=>
+        [...t,
+       {task:newTask,time:date}]);
+      setNewTask("");
     }
 
   }
@@ -59,7 +61,8 @@ function App(){
       <ol>
         {tasks.map((task, index) => (
           <li key={index}>
-            <span className="text">{task}</span>
+            <span className="text">{task.task}</span>
+            <div className="to-do-list-time">{task.time}</div>
             <button className="delete-button" onClick={() => deleteTask(index)}>
               Delete
             </button>
