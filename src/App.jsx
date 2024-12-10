@@ -12,6 +12,8 @@ function App(){
 
   function addTask(){
     if(newTask.trim()!=""){
+      const date=new Date().toLocaleDateString;
+      console.log(data);
       setTask((t=>[...t,newTask]))
       setNewTask("")
     }
@@ -42,7 +44,7 @@ function App(){
   }
   return (
     <div className="to-do-list">
-      <h1>To-do-List</h1>
+      <h1>Priority</h1>
       <div>
         <input
           type="text"
